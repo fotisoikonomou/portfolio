@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --font-sans: "Commissioner Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  --paper: #f3f4f7;
+  --ink: #1b1830;
+  --muted: #5e5a73;
+  --line: #d9d7e3;
+  --accent: #5b2a86;
+  --gold: #9a6b12;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: #17151f;
+  --ink: #eceaf3;
+  --muted: #a6a2b8;
+  --line: #2e2a3d;
+  --accent: #c3a6ee;
+  --gold: #e0b458;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

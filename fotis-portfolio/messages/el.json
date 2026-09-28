@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Φώτης Οικονόμου | Full-stack Software Engineer",
+    "description": "Full-stack μηχανικός λογισμικού στην Αθήνα — React/TypeScript και PHP/Laravel, με side projects σε βυζαντινή μουσική, EEG και computer vision."
+  },
+  "nav": {
+    "about": "Σχετικά",
+    "projects": "Projects",
+    "experience": "Εμπειρία",
+    "education": "Σπουδές",
+    "skills": "Δεξιότητες",
+    "contact": "Επικοινωνία",
+    "label": "Κύρια πλοήγηση"
+  },
+  "hero": {
+    "role": "Full-stack μηχανικός λογισμικού",
+    "lede": "Δέκα χρόνια React/TypeScript και PHP/Laravel. Εκτός δουλειάς, σήματα: από βυζαντινές ψαλμωδίες μέχρι EEG.",
+    "location": "Αθήνα",
+    "traceLabel": "Διακοσμητική κυματομορφή που αντιδρά στον δείκτη"
+  },
+  "about": {
+    "title": "Σχετικά",
+    "p1": "Είμαι full-stack μηχανικός λογισμικού στην Αθήνα, με περίπου δέκα χρόνια σε React/TypeScript στο frontend και PHP (Laravel, Yii) στο backend. Έχω δουλέψει σε δημόσιες πλατφόρμες με πραγματικούς χρήστες: για σχεδόν τέσσερα χρόνια ήμουν ο μοναδικός developer μιας πλατφόρμας του Υπουργείου Ναυτιλίας, και πιο πρόσφατα έγραφα frontend για την εθνική φορολογική πύλη της Λιθουανίας.",
+    "p2": "Εκτός δουλειάς με απασχολούν τα σήματα. Έχω δίπλωμα βυζαντινής μουσικής και φτιάχνω έναν classifier που αναγνωρίζει τον ήχο ενός ύμνου. Εδώ και πάνω από έναν χρόνο μελετώ επεξεργασία EEG και brain-computer interfaces, με στόχο την υποστηρικτική τεχνολογία για ανθρώπους με σοβαρή κινητική αναπηρία."
+  },
+  "projects": {
+    "title": "Projects",
+    "status": {
+      "active": "Σε εξέλιξη",
+      "design": "Σε σχεδιασμό",
+      "done": "Ολοκληρωμένο"
+    },
+    "code": "Κώδικας",
+    "demo": "Demo"
+  },
+  "experience": { "title": "Εμπειρία" },
+  "education": { "title": "Σπουδές" },
+  "skills": { "title": "Δεξιότητες" },
+  "contact": {
+    "title": "Επικοινωνία",
+    "intro": "Ψάχνω την επόμενη θέση μου, στην Ελλάδα ή remote. Γράψε μου εδώ ή στείλε email.",
+    "name": "Όνομα",
+    "email": "Email",
+    "message": "Μήνυμα",
+    "send": "Αποστολή μηνύματος",
+    "sending": "Αποστολή…",
+    "success": "Το μήνυμα στάλθηκε. Θα σου απαντήσω σύντομα.",
+    "errorValidation": "Συμπλήρωσε όνομα, έγκυρο email και μήνυμα τουλάχιστον 10 χαρακτήρων.",
+    "errorServer": "Το μήνυμα δεν στάλθηκε. Δοκίμασε ξανά ή στείλε απευθείας email.",
+    "honeypot": "Άφησε αυτό το πεδίο κενό"
+  },
+  "cv": { "download": "Κατέβασε το βιογραφικό (PDF)" },
+  "theme": { "toLight": "Φωτεινό θέμα", "toDark": "Σκοτεινό θέμα" },
+  "locale": { "switch": "English", "switchLabel": "Switch to English" },
+  "footer": { "motto": "Fall forward." }
+}

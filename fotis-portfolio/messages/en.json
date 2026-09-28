@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Fotis Oikonomou | Full-stack Software Engineer",
+    "description": "Full-stack software engineer in Athens — React/TypeScript and PHP/Laravel, with side projects in Byzantine music, EEG and computer vision."
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact",
+    "label": "Main navigation"
+  },
+  "hero": {
+    "role": "Full-stack software engineer",
+    "lede": "Ten years of React/TypeScript and PHP/Laravel. Off the clock, signals: from Byzantine chant to EEG.",
+    "location": "Athens, Greece",
+    "traceLabel": "Decorative waveform that reacts to the pointer"
+  },
+  "about": {
+    "title": "About",
+    "p1": "I'm a full-stack software engineer in Athens with about ten years of React/TypeScript on the frontend and PHP (Laravel, Yii) on the backend. I've built public platforms with real users: for almost four years I was the sole developer of a platform for the Greek Ministry of Maritime Affairs, and more recently I worked on the frontend of Lithuania's national tax portal.",
+    "p2": "Outside work, I'm drawn to signals. I hold a diploma in Byzantine music and I'm building a classifier that recognises the mode of a hymn. For over a year I've been studying EEG processing and brain-computer interfaces, aiming at assistive technology for people with severe motor impairment."
+  },
+  "projects": {
+    "title": "Projects",
+    "status": {
+      "active": "In progress",
+      "design": "In design",
+      "done": "Completed"
+    },
+    "code": "Code",
+    "demo": "Demo"
+  },
+  "experience": { "title": "Experience" },
+  "education": { "title": "Education" },
+  "skills": { "title": "Skills" },
+  "contact": {
+    "title": "Contact",
+    "intro": "I'm looking for my next role, in Greece or remote. Write to me here or send an email.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Message sent. I'll get back to you soon.",
+    "errorValidation": "Enter your name, a valid email and a message of at least 10 characters.",
+    "errorServer": "The message wasn't sent. Try again or email me directly.",
+    "honeypot": "Leave this field empty"
+  },
+  "cv": { "download": "Download CV (PDF)" },
+  "theme": { "toLight": "Light theme", "toDark": "Dark theme" },
+  "locale": { "switch": "Ελληνικά", "switchLabel": "Αλλαγή σε Ελληνικά" },
+  "footer": { "motto": "Fall forward." }
+}
