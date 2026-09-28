@@ -2,10 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Η κυματομορφή του hero: άθροισμα ημιτόνων σαν σήμα EEG/ήχου.
- * Κοντά στον δείκτη το πλάτος μεγαλώνει. Με reduced motion ζωγραφίζεται στατικά.
- */
+
 export function SignalTrace({ label }: { label: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

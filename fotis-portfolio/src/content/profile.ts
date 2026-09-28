@@ -1,7 +1,4 @@
-/**
- * Όλα τα στοιχεία σου σε ένα σημείο.
- * Ό,τι έχει "TODO" χρειάζεται συμπλήρωση από σένα.
- */
+
 import type { Locale } from "@/i18n/routing";
 
 export type L = { el: string; en: string };
@@ -10,12 +7,12 @@ export const pick = (value: L, locale: Locale) => value[locale];
 export const profile = {
   firstName: { el: "Φώτης", en: "Fotis" },
   lastName: { el: "Οικονόμου", en: "Oikonomou" },
-  email: "fotiosoikonomou1@gmail.com", // TODO
+  email: "fotiosoikonomou1@gmail.com", 
   links: {
-    github: "https://github.com/fotisoikonomou", // TODO
+    github: "https://github.com/fotisoikonomou", 
     linkedin: "https://www.linkedin.com/in/fotios-oikonomou-full-stack-web-developer/", // TODO
   },
-  // Βάλε τα PDF σου στο public/cv/ με αυτά ακριβώς τα ονόματα
+ 
   cv: {
     el: "/cv/Fotis_Oikonomou_Resume_el.pdf",
     en: "/cv/Fotis_Oikonomou_Resume.pdf",

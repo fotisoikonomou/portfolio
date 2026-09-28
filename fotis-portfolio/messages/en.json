@@ -20,8 +20,8 @@
   },
   "about": {
     "title": "About",
-    "p1": "I'm a full-stack software engineer in Athens with about ten years of React/TypeScript on the frontend and PHP (Laravel, Yii) on the backend. I've built public platforms with real users: for almost four years I was the sole developer of a platform for the Greek Ministry of Maritime Affairs, and more recently I worked on the frontend of Lithuania's national tax portal.",
-    "p2": "Outside work, I'm drawn to signals. I hold a diploma in Byzantine music and I'm building a classifier that recognises the mode of a hymn. For over a year I've been studying EEG processing and brain-computer interfaces, aiming at assistive technology for people with severe motor impairment."
+    "p1": "I am an Athens-based software engineer with approximately a decade of experience in React/TypeScript on the frontend and PHP (Laravel, Yii) on the backend. I have delivered mission-critical, large-scale public sector platforms: for nearly four years, I was the sole developer of a system utilized by officials at the Hellenic Ministry of Maritime Affairs, and more recently, I contributed to frontend development for Lithuania’s national tax portal.",
+    "p2": "In parallel, I draw on my diploma in Byzantine music to develop a classifier that identifies the mode (echos) of a hymn from a user-submitted audio clip. Over the past year, I have also been systematically delving into EEG signal processing and Brain-Computer Interfaces (BCIs), driven by a vision to build assistive technology for individuals with severe motor disabilities. I firmly believe we are living in an era full of possibilities for anyone committed to continuous growth."
   },
   "projects": {
     "title": "Projects",
