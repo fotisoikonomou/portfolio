@@ -39,10 +39,8 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/fotios-oikonomou-full-stack-web-developer/", // TODO
   },
  
-  cv: {
-    el: "/cv/Fotis_Oikonomou_Resume_el.pdf",
-    en: "/cv/Fotis_Oikonomou_Resume.pdf",
-  },
+  // One English CV for both languages; the Greek button label says so.
+  cv: "/cv/Fotis_Oikonomou_Resume.pdf",
   timezone: "EET / EEST",
   stats: [
     { value: { el: "7+", en: "7+" }, label: { el: "Χρόνια στην ανάπτυξη web", en: "Years in web development" } },
@@ -58,64 +56,66 @@ export const profile = {
   ] as { value: L; label: L }[],
 };
 
-export type ProjectStatus = "active" | "design" | "done";
+// App-store style buttons: `kicker` is the small line above `label` ("Get it on" / "Google Play").
+export type StoreLink = { label: L; kicker: L; app: string; href: string; icon: SimpleIcon };
 
+const safeWaterSportsStores: StoreLink[] = [
+  {
+    app: "Safe Water Sports",
+    kicker: { el: "Διαθέσιμο στο", en: "Get it on" },
+    label: { el: "Google Play", en: "Google Play" },
+    href: "https://play.google.com/store/apps/details?id=com.digibooks4all.safewatersports",
+    icon: siGoogleplay,
+  },
+  {
+    app: "Safe Water Sports",
+    kicker: { el: "Διαθέσιμο στο", en: "Download on the" },
+    label: { el: "App Store", en: "App Store" },
+    href: "https://apps.apple.com/app/id997238444",
+    icon: siApple,
+  },
+];
+
+export type ProjectStatus = "live" | "active" | "design" | "done";
+
+// To add a project, append an entry here; every field except title/kind/status/summary/stack is optional.
 export const projects: {
   title: L;
+  kind: L;
   status: ProjectStatus;
   summary: L;
+  facts?: { value: L; label: L }[];
   stack: string[];
+  stores?: StoreLink[];
   code?: string;
   demo?: string;
 }[] = [
   {
-    title: {
-      el: "Αναγνώριση ήχων βυζαντινής μουσικής",
-      en: "Byzantine chant mode classifier",
+    title: { el: "Safe Water Sports", en: "Safe Water Sports" },
+    kind: { el: "Επαγγελματικό · Quality & Reliability", en: "Professional · Quality & Reliability" },
+    status: "live",
+    summary: {
+      el: "Εφαρμογή για ασφαλή θαλάσσια αναψυχή, του Safe Water Sports, μη κερδοσκοπικής οργάνωσης που συνεργάζεται με το Υπουργείο Ναυτιλίας. Δείχνει σε πολίτες και επιθεωρητές τα αδειοδοτημένα κέντρα θαλάσσιων σπορ και τις παραλίες με ναυαγοσώστη σε όλη την Ελλάδα. Την ανέπτυξα μόνος μου, από τον σχεδιασμό μέχρι τα stores.",
+      en: "An app for safer days at sea by Safe Water Sports, a non-profit that works with the Ministry of Maritime Affairs. It shows citizens and inspectors the licensed water-sports centres and lifeguarded beaches across Greece. I built it on my own, from design all the way to the app stores.",
     },
+    facts: [
+      { value: { el: "50.000", en: "50,000" }, label: { el: "χρήστες", en: "users" } },
+      { value: { el: "iOS + Android", en: "iOS + Android" }, label: { el: "ένας κώδικας", en: "one codebase" } },
+      { value: { el: "~4 χρόνια", en: "~4 years" }, label: { el: "μοναδικός developer", en: "sole developer" } },
+    ],
+    stack: ["React Native", "Expo"],
+    stores: safeWaterSportsStores,
+  },
+  {
+    title: { el: "Αναγνώριση ήχου βυζαντινών ύμνων", en: "Byzantine chant mode classifier" },
+    kind: { el: "Προσωπικό", en: "Personal" },
     status: "active",
     summary: {
-      el: "Ταξινομεί ηχογραφήσεις ύμνων σε έναν από τους οκτώ ήχους. Το pipeline κόβει τις ηχογραφήσεις σε clips, εξάγει χαρακτηριστικά ήχου (MFCC, chroma) και εκπαιδεύει έναν ταξινομητή· η επόμενη εκδοχή χρησιμοποιεί embeddings από προεκπαιδευμένο μοντέλο. Θα δημοσιευτούν ο κώδικας και τα βάρη του μοντέλου.",
-      en: "Classifies hymn recordings into one of the eight Byzantine modes (ήχοι). The pipeline slices recordings into clips, extracts audio features (MFCC, chroma) and trains a classifier; the next version uses frozen embeddings from a pretrained audio model. Code and model weights will be published.",
+      el: "Ανεβάζεις ένα απόσπασμα από έναν ύμνο και η εφαρμογή σού λέει σε ποιον από τους οκτώ ήχους της βυζαντινής μουσικής ανήκει. Από πίσω, ένα μοντέλο μηχανικής μάθησης «ακούει» τη μελωδία μέσα από χαρακτηριστικά ήχου (MFCC, chroma). Ενώνει το δίπλωμά μου στη βυζαντινή μουσική με τον κώδικα.",
+      en: "Upload a clip of a hymn and the app tells you which of the eight modes (echoi) of Byzantine music it belongs to. Behind the scenes, a machine-learning model “listens” to the melody through audio features (MFCC, chroma). It brings together my diploma in Byzantine music and my code.",
     },
     stack: ["Python", "librosa", "React", "TypeScript"],
     code: undefined, // TODO: link στο repo όταν γίνει public
-  },
-  {
-    title: { el: "NeuroScope", en: "NeuroScope" },
-    status: "active",
-    summary: {
-      el: "Dashboard σε React για οπτικοποίηση σημάτων EEG, με παραγωγή συνθετικού σήματος και αρχιτεκτονική έτοιμη για σύνδεση με πραγματικές συσκευές μέσω BrainFlow.",
-      en: "A React dashboard for visualising EEG signals, with synthetic signal generation and an architecture ready to connect to real headsets through BrainFlow.",
-    },
-    stack: ["React", "TypeScript", "BrainFlow"],
-    code: undefined, // TODO
-    demo: undefined, // TODO
-  },
-  {
-    title: {
-      el: "Κάμερα-παγίδα για τον λαγοκέφαλο",
-      en: "Toadfish camera trap",
-    },
-    status: "design",
-    summary: {
-      el: "Υποβρύχια κάμερα-παγίδα με δόλωμα (BRUV) και ταξινομητής εικόνας για την καταγραφή του χωροκατακτητικού λαγοκέφαλου στις ελληνικές θάλασσες.",
-      en: "A baited underwater camera trap (BRUV) with an image classifier for monitoring the invasive silver-cheeked toadfish in Greek waters.",
-    },
-    stack: ["Computer vision", "Python", "Hardware"],
-  },
-  {
-    title: {
-      el: "Job Application Tracker API",
-      en: "Job Application Tracker API",
-    },
-    status: "done",
-    summary: {
-      el: "REST API σε καθαρή PHP 8.3 για την παρακολούθηση αιτήσεων εργασίας, πάνω σε Docker και nginx — χωρίς framework, για να φαίνονται τα θεμέλια.",
-      en: "A REST API in plain PHP 8.3 for tracking job applications, running on Docker and nginx — no framework, to show the fundamentals.",
-    },
-    stack: ["PHP 8.3", "Docker", "nginx"],
-    code: undefined, // TODO
   },
 ];
 
@@ -126,8 +126,7 @@ export const experience: {
   period: string;
   highlights: L<string[]>;
   stack: string[];
-  // App-store style buttons: `kicker` is the small line above `label` ("Get it on" / "Google Play").
-  links?: { label: L; kicker: L; app: string; href: string; icon: SimpleIcon }[];
+  links?: StoreLink[];
 }[] = [
   {
     role: { el: "Software Engineer", en: "Software Engineer" },
@@ -159,35 +158,20 @@ export const experience: {
     period: "11/2021 – 07/2025",
     highlights: {
       el: [
-        "Μοναδικός developer του Safe Water Sports, της πανελλαδικής εφαρμογής iOS/Android του Υπουργείου Ναυτιλίας, σε React Native και Expo, με 50.000 πολίτες και επιθεωρητές πεδίου. Είχα την ευθύνη της από τον σχεδιασμό μέχρι την παραγωγή για σχεδόν 4 χρόνια.",
+        "Μοναδικός developer του Safe Water Sports, πανελλαδικής εφαρμογής iOS/Android μιας μη κερδοσκοπικής οργάνωσης που συνεργάζεται με το Υπουργείο Ναυτιλίας, σε React Native και Expo, με 50.000 πολίτες και επιθεωρητές πεδίου. Είχα την ευθύνη της από τον σχεδιασμό μέχρι την παραγωγή για σχεδόν 4 χρόνια.",
         "Μοναδικός developer του συστήματος καταγραφής συμβάντων του Λιμενικού Σώματος (PHP/Yii2, MySQL, REST APIs), που χρησιμοποιείται από όλες τις Λιμενικές Αρχές της Ελλάδας για την καταγραφή θαλάσσιων ατυχημάτων, πνιγμών και επιθεωρήσεων· συνέλεξα τις απαιτήσεις απευθείας με το Υπουργείο.",
         "Ανέπτυξα frontends σε React/TypeScript για διοικητικά συστήματα του ελληνικού δημόσιου τομέα.",
         "Συντήρησα και αναβάθμισα Laravel (PHP 8) εφαρμογές σε παραγωγή για πλατφόρμες του δημόσιου τομέα, βελτιστοποιώντας MySQL queries και την απόδοση του backend.",
       ],
       en: [
-        "Sole developer of Safe Water Sports, the Ministry of Maritime Affairs’ nationwide iOS/Android app built with React Native and Expo, used by 50,000 citizens and field inspectors. I owned it from design to production for nearly 4 years.",
+        "Sole developer of Safe Water Sports, a nationwide iOS/Android app built with React Native and Expo for a non-profit that works with the Ministry of Maritime Affairs, used by 50,000 citizens and field inspectors. I owned it from design to production for nearly 4 years.",
         "Sole developer of the Hellenic Coast Guard’s incident-tracking system (PHP/Yii2, MySQL, REST APIs), used by every Port Authority in Greece to record sea accidents, drownings and inspections; gathered requirements directly with the Ministry.",
         "Built React/TypeScript frontends for Greek public-sector administrative systems.",
         "Maintained and upgraded production Laravel (PHP 8) applications for public-sector platforms, optimizing MySQL queries and backend performance.",
       ],
     },
     stack: ["React", "TypeScript", "React Native", "Expo", "PHP 8", "Yii2", "Laravel", "MySQL", "REST APIs"],
-    links: [
-      {
-        app: "Safe Water Sports",
-        kicker: { el: "Διαθέσιμο στο", en: "Get it on" },
-        label: { el: "Google Play", en: "Google Play" },
-        href: "https://play.google.com/store/apps/details?id=com.digibooks4all.safewatersports",
-        icon: siGoogleplay,
-      },
-      {
-        app: "Safe Water Sports",
-        kicker: { el: "Διαθέσιμο στο", en: "Download on the" },
-        label: { el: "App Store", en: "App Store" },
-        href: "https://apps.apple.com/app/id997238444",
-        icon: siApple,
-      },
-    ],
+    links: safeWaterSportsStores,
   },
   {
     role: { el: "Full-Stack Web Developer", en: "Full-Stack Web Developer" },

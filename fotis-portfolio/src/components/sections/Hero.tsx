@@ -24,7 +24,8 @@ export async function Hero({ locale }: { locale: Locale }) {
             {t("hero.cta")}
           </a>
           <a
-            href={profile.cv[locale]}
+            href={profile.cv}
+            hrefLang="en"
             download
             className="rounded-full border border-line bg-paper px-7 py-3.5 font-semibold shadow-lg shadow-ink/5 transition-transform hover:-translate-y-0.5"
           >

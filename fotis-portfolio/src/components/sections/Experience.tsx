@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { experience, pick } from "@/content/profile";
 import { NewTabHint } from "@/components/NewTabHint";
+import { StoreButton } from "@/components/StoreButton";
 import { Section } from "./Section";
 
 export async function Experience({ locale }: { locale: Locale }) {
@@ -55,27 +56,7 @@ export async function Experience({ locale }: { locale: Locale }) {
               {job.links && (
                 <div className="mt-6 flex flex-wrap gap-3">
                   {job.links.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 rounded-2xl bg-fresh py-2.5 pr-5 pl-4 text-paper shadow-lg shadow-fresh/25 transition-transform hover:-translate-y-0.5"
-                    >
-                      <svg viewBox="0 0 24 24" aria-hidden="true" className="size-7 shrink-0" fill="currentColor">
-                        <path d={link.icon.path} />
-                      </svg>
-                      <span className="grid leading-tight">
-                        <span className="text-xs font-medium">
-                          <span className="sr-only">{link.app}: </span>
-                          {pick(link.kicker, locale)}
-                        </span>
-                        <span className="text-lg font-semibold tracking-tight">
-                          {pick(link.label, locale)}
-                          <NewTabHint label={t("a11y.newTab")} arrow={false} />
-                        </span>
-                      </span>
-                    </a>
+                    <StoreButton key={link.href} link={link} locale={locale} newTabLabel={t("a11y.newTab")} />
                   ))}
                 </div>
               )}

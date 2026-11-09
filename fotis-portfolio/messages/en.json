@@ -23,7 +23,7 @@
   "about": {
     "title": "About",
     "currentlyLabel": "Currently",
-    "currently": "Building a classifier that identifies the mode of Byzantine hymns, and digging into EEG signal processing and Brain-Computer Interfaces.",
+    "currently": "Combining my diploma in Byzantine music with code: I'm building a classifier that recognises, from audio, which musical mode (echos) a hymn is in (Python, librosa, React). Alongside that, I'm exploring EEG signal processing and Brain-Computer Interfaces.",
     "basedIn": "Based in",
     "connect": "Let's connect",
     "summary": "Professional summary",
@@ -32,6 +32,7 @@
   "projects": {
     "title": "Projects",
     "status": {
+      "live": "Live",
       "active": "In progress",
       "design": "In design",
       "done": "Completed"

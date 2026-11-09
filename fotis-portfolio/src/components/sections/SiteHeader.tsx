@@ -45,7 +45,8 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href={profile.cv[locale]}
+            href={profile.cv}
+            hrefLang="en"
             download
             className="mr-2 hidden text-sm font-medium text-accent underline-offset-4 hover:underline sm:inline"
           >
