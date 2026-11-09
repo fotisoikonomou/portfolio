@@ -95,13 +95,13 @@ export const projects: {
     kind: { el: "Επαγγελματικό · Quality & Reliability", en: "Professional · Quality & Reliability" },
     status: "live",
     summary: {
-      el: "Εφαρμογή για ασφαλή θαλάσσια αναψυχή, που αναπτύχθηκε στην Quality & Reliability S.A., η οποία λειτουργεί τη ΜΚΟ Safe Water Sports. Δείχνει σε πολίτες και επιθεωρητές τα αδειοδοτημένα κέντρα θαλάσσιων σπορ και τις παραλίες με ναυαγοσώστη σε όλη την Ελλάδα. Την ανέπτυξα μόνος μου, από τον σχεδιασμό μέχρι τα stores.",
-      en: "An app for safer days at sea, built at Quality & Reliability S.A., which runs the Safe Water Sports non-profit. It shows citizens and inspectors the licensed water-sports centres and lifeguarded beaches across Greece. I built it on my own, from design all the way to the app stores.",
+      el: "Εφαρμογή της μη κερδοσκοπικής οργάνωσης Safe Water Sports, που συνεργάζεται με το Υπουργείο Ναυτιλίας, για ασφαλή θαλάσσια αναψυχή. Δείχνει σε πολίτες και επιθεωρητές τα αδειοδοτημένα κέντρα θαλάσσιων σπορ και τις παραλίες με ναυαγοσώστη σε όλη την Ελλάδα. Ανέπτυξα νέες λειτουργίες για iOS και Android και συντήρησα την εφαρμογή σε παραγωγή για σχεδόν 4 χρόνια.",
+      en: "An app by Safe Water Sports, a non-profit that works with the Ministry of Maritime Affairs, for safer days at sea. It shows citizens and inspectors the licensed water-sports centres and lifeguarded beaches across Greece. I built new features for iOS and Android and maintained the app in production for nearly 4 years.",
     },
     facts: [
       { value: { el: "50.000", en: "50,000" }, label: { el: "χρήστες", en: "users" } },
       { value: { el: "iOS + Android", en: "iOS + Android" }, label: { el: "ένας κώδικας", en: "one codebase" } },
-      { value: { el: "~4 χρόνια", en: "~4 years" }, label: { el: "μοναδικός developer", en: "sole developer" } },
+      { value: { el: "~4 χρόνια", en: "~4 years" }, label: { el: "σε παραγωγή", en: "in production" } },
     ],
     stack: ["React Native", "Expo"],
     stores: safeWaterSportsStores,
@@ -158,14 +158,14 @@ export const experience: {
     period: "11/2021 – 07/2025",
     highlights: {
       el: [
-        "Μοναδικός developer του Safe Water Sports, της εφαρμογής iOS/Android της εταιρείας για την ασφάλεια στη θάλασσα (React Native, Expo), που λειτουργεί μέσω της ΜΚΟ Safe Water Sports και χρησιμοποιείται από 50.000 πολίτες και ελεγκτές πεδίου. Είχα την ευθύνη της από τον σχεδιασμό μέχρι την παραγωγή για σχεδόν 4 χρόνια.",
-        "Μοναδικός developer του συστήματος καταγραφής συμβάντων του Λιμενικού Σώματος (PHP/Yii2, MySQL, REST APIs), που χρησιμοποιείται από όλες τις Λιμενικές Αρχές της Ελλάδας για την καταγραφή θαλάσσιων ατυχημάτων, πνιγμών και επιθεωρήσεων· συνέλεξα τις απαιτήσεις απευθείας με το Υπουργείο.",
+        "Είχα την ευθύνη του Safe Water Sports σε παραγωγή για σχεδόν 4 χρόνια: εφαρμογή iOS/Android για την ασφάλεια στη θάλασσα (React Native, Expo), που λειτουργεί μέσω της ΜΚΟ Safe Water Sports και χρησιμοποιείται από 50.000 πολίτες και ελεγκτές πεδίου. Ανέπτυξα νέες λειτουργίες και τη συντήρησα σε παραγωγή.",
+        "Υπεύθυνος για το σύστημα καταγραφής συμβάντων του Λιμενικού Σώματος σε παραγωγή (PHP/Yii2, MySQL, REST APIs), που χρησιμοποιείται από όλες τις Λιμενικές Αρχές της Ελλάδας για την καταγραφή θαλάσσιων ατυχημάτων, πνιγμών και επιθεωρήσεων· συνέλεξα τις απαιτήσεις απευθείας με το Υπουργείο.",
         "Ανέπτυξα frontends σε React/TypeScript για διοικητικά συστήματα του ελληνικού δημόσιου τομέα.",
         "Συντήρησα και αναβάθμισα Laravel (PHP 8) εφαρμογές σε παραγωγή για πλατφόρμες του δημόσιου τομέα, βελτιστοποιώντας MySQL queries και την απόδοση του backend.",
       ],
       en: [
-        "Sole developer of Safe Water Sports, the company's water-safety app for iOS and Android (React Native, Expo), run through the Safe Water Sports non-profit and used by 50,000 citizens and field inspectors. I owned it from design to production for nearly 4 years.",
-        "Sole developer of the Hellenic Coast Guard’s incident-tracking system (PHP/Yii2, MySQL, REST APIs), used by every Port Authority in Greece to record sea accidents, drownings and inspections; gathered requirements directly with the Ministry.",
+        "Responsible for Safe Water Sports in production for nearly 4 years: a water-safety app for iOS and Android (React Native, Expo), run through the Safe Water Sports non-profit and used by 50,000 citizens and field inspectors. Built new features and maintained it in production.",
+        "Responsible for the Hellenic Coast Guard’s incident-tracking system in production (PHP/Yii2, MySQL, REST APIs), used by every Port Authority in Greece to record sea accidents, drownings and inspections; gathered requirements directly with the Ministry.",
         "Built React/TypeScript frontends for Greek public-sector administrative systems.",
         "Maintained and upgraded production Laravel (PHP 8) applications for public-sector platforms, optimizing MySQL queries and backend performance.",
       ],

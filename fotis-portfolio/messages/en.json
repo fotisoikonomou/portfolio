@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fotis Oikonomou | Full-stack Engineer (React/TypeScript · PHP/Laravel)",
-    "description": "Full-stack engineer in Athens with 7+ years building web and mobile applications. Sole developer of two nationwide systems in Greece; most recently built frontend modules for Lithuania's national tax portal."
+    "description": "Full-stack engineer in Athens with 7+ years building web and mobile applications. Responsible for two nationwide production systems in Greece; most recently built frontend modules for Lithuania's national tax portal."
   },
   "nav": {
     "about": "About",
@@ -27,7 +27,7 @@
     "basedIn": "Based in",
     "connect": "Let's connect",
     "summary": "Professional summary",
-    "p1": "I'm a full-stack engineer with 7+ years building web and mobile applications, from database to UI. I've been the sole developer behind two nationwide systems in Greece: Safe Water Sports, a water-safety app for iOS and Android used by 50,000 people, and the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country. I took both from requirements to production. Most recently I built frontend modules for SOLON, Lithuania's national tax portal. I'm at my best when I own a product end-to-end, and equally effective inside a larger team. Open to roles in Greece, remote, or relocation."
+    "p1": "I'm a full-stack engineer with 7+ years building web and mobile applications, from database to UI. For nearly 4 years I was responsible for two nationwide production systems in Greece: the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country, and Safe Water Sports, a water-safety app for iOS and Android with 50,000 users. I fixed database issues, improved their reliability and built new features. Most recently I built frontend modules for SOLON, Lithuania's national tax portal. I work well both when I own a system end-to-end and inside a larger team. Open to roles in Greece, remote, or relocation."
   },
   "projects": {
     "title": "Projects",
