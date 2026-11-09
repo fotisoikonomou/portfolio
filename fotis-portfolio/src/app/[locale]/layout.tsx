@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import "@fontsource-variable/commissioner";
 import "../globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fotisoikonomou.dev";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -26,7 +26,7 @@ export async function generateMetadata({
     description: t("description"),
     alternates: {
       canonical: `/${locale}`,
-      languages: { el: "/el", en: "/en" },
+      languages: { en: "/en", el: "/el", "x-default": "/en" },
     },
     openGraph: {
       title: t("title"),
@@ -35,7 +35,7 @@ export async function generateMetadata({
       type: "website",
       locale: locale === "el" ? "el_GR" : "en_US",
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", title: t("title"), description: t("description") },
     icons: {
       icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>〰️</text></svg>",
     },

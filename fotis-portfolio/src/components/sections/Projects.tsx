@@ -24,7 +24,7 @@ export async function Projects({ locale }: { locale: Locale }) {
         {projects.map((p) => (
           <li
             key={p.title.en}
-            className="flex flex-col rounded-3xl border border-line bg-card p-6 shadow-sm transition-shadow hover:shadow-md md:p-8"
+            className="flex min-w-0 flex-col rounded-3xl border border-line bg-card p-6 shadow-sm transition-shadow hover:shadow-md md:p-8"
           >
             <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
               <p className="text-sm font-semibold uppercase tracking-wider text-muted">{pick(p.kind, locale)}</p>
@@ -37,15 +37,21 @@ export async function Projects({ locale }: { locale: Locale }) {
             <h3 className="mt-4 text-2xl font-semibold tracking-tight">{pick(p.title, locale)}</h3>
             <p className="mt-3 leading-[1.7] text-ink/85">{pick(p.summary, locale)}</p>
 
+            {/* Facts stack as rows in a narrow card and switch to three columns once the card is wide enough. */}
             {p.facts && (
-              <dl className="mt-6 grid grid-cols-3 gap-3">
-                {p.facts.map((f) => (
-                  <div key={f.label.en} className="flex flex-col-reverse gap-0.5 rounded-2xl bg-paper px-3 py-3 text-center">
-                    <dt className="text-xs text-muted">{pick(f.label, locale)}</dt>
-                    <dd className="text-lg font-bold tracking-tight text-fresh md:text-xl">{pick(f.value, locale)}</dd>
-                  </div>
-                ))}
-              </dl>
+              <div className="mt-6 @container">
+                <dl className="grid gap-2 @md:grid-cols-3 @md:gap-3">
+                  {p.facts.map((f) => (
+                    <div
+                      key={f.label.en}
+                      className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-0.5 rounded-2xl bg-paper px-4 py-3 @md:flex-col @md:flex-nowrap @md:items-center @md:px-3 @md:text-center"
+                    >
+                      <dt className="text-sm text-muted @md:text-xs">{pick(f.label, locale)}</dt>
+                      <dd className="order-first text-lg font-bold tracking-tight text-fresh md:text-xl">{pick(f.value, locale)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             )}
 
             <ul className="mt-6 flex flex-wrap gap-2" aria-label={t("experience.stack")}>

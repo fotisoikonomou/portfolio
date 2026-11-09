@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Fotis Oikonomou | Frontend Engineer",
-    "description": "Frontend engineer in Athens, working with React and TypeScript. I've built apps for public-sector platforms in Greece and Lithuania that thousands of people use every day."
+    "title": "Fotis Oikonomou | Full-stack Engineer (React/TypeScript · PHP/Laravel)",
+    "description": "Full-stack engineer in Athens with 7+ years building web and mobile applications. Sole developer of two nationwide systems in Greece; most recently built frontend modules for Lithuania's national tax portal."
   },
   "nav": {
     "about": "About",
@@ -15,7 +15,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "cta": "Get in touch",
-    "role": "Frontend Engineer · React & TypeScript",
+    "role": "Full-stack Engineer · React/TypeScript & PHP/Laravel",
     "lede": "I've spent the last few years building apps that real people rely on every day, from Coast Guard officers across Greece to taxpayers in Lithuania.",
     "location": "Athens, Greece",
     "traceLabel": "Decorative waveform that reacts to the pointer"
@@ -27,7 +27,7 @@
     "basedIn": "Based in",
     "connect": "Let's connect",
     "summary": "Professional summary",
-    "p1": "Frontend engineer with 7+ years building web applications, the last 3 focused on React and TypeScript in production, most recently on large public-sector platforms in Greece and Lithuania. I specialise in complex forms, shared component libraries and accessible (WCAG 2.1) interfaces built from Figma designs. With a full-stack background in PHP/Laravel, I can take features end-to-end and work closely with backend teams on API design. Open to remote roles and relocation."
+    "p1": "I'm a full-stack engineer with 7+ years building web and mobile applications, from database to UI. I've been the sole developer behind two nationwide systems in Greece: Safe Water Sports, a water-safety app for iOS and Android used by 50,000 people, and the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country. I took both from requirements to production. Most recently I built frontend modules for SOLON, Lithuania's national tax portal. I'm at my best when I own a product end-to-end, and equally effective inside a larger team. Open to roles in Greece, remote, or relocation."
   },
   "projects": {
     "title": "Projects",
@@ -45,7 +45,7 @@
   "skills": { "title": "Skills" },
   "contact": {
     "title": "Contact",
-    "intro": "I'm looking for my next role, in Greece or remote. Write to me here or send an email.",
+    "intro": "Open to roles in Greece, remote, or relocation. Write to me here or send an email.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
