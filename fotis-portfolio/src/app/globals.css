@@ -9,6 +9,9 @@
   --color-line: var(--line);
   --color-accent: var(--accent);
   --color-gold: var(--gold);
+  --color-fresh: var(--fresh);
+  --color-sun: var(--sun);
+  --color-card: var(--card);
   --font-sans: "Commissioner Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -18,7 +21,11 @@
   --muted: #5e5a73;
   --line: #d9d7e3;
   --accent: #5b2a86;
-  --gold: #9a6b12;
+  /* Darkened to meet WCAG AA on paper/card: fresh 4.9:1, gold 5.1:1, sun 3.6:1 (large text only). */
+  --gold: #8a5f0f;
+  --fresh: #157a45;
+  --sun: #a37a00;
+  --card: #fbfbfd;
   color-scheme: light;
 }
 
@@ -29,12 +36,16 @@
   --line: #2e2a3d;
   --accent: #c3a6ee;
   --gold: #e0b458;
+  --fresh: #5fd38d;
+  --sun: #f5d14a;
+  --card: #1f1c2a;
   color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  /* Χώρος για το sticky πάνω μενού */
+  scroll-padding-top: 7rem;
 }
 
 body {

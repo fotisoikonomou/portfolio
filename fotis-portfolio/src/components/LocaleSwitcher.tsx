@@ -15,10 +15,13 @@ export function LocaleSwitcher() {
   return (
     <button
       type="button"
-      aria-label={t("switchLabel")}
       onClick={() => router.replace(pathname, { locale: next })}
       className="relative grid h-9 w-[5.5rem] grid-cols-2 items-center rounded-full border border-line p-1 text-xs font-semibold transition-colors hover:border-accent"
     >
+      {/* Accessible name = this hidden label + the visible "EL EN", so it contains the visible text (WCAG 2.5.3). */}
+      <span lang={next} className="sr-only">
+        {t("switchLabel")}:{" "}
+      </span>
       {/* Το «χάπι» γλιστράει κάτω από την ενεργή γλώσσα */}
       <span
         aria-hidden="true"
@@ -30,7 +33,6 @@ export function LocaleSwitcher() {
         <span
           key={o}
           lang={o}
-          aria-hidden="true"
           className={`relative z-10 text-center transition-colors duration-300 ${
             o === locale ? "text-paper" : "text-muted"
           }`}

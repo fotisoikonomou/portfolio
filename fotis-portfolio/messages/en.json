@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Fotis Oikonomou | Full-stack Software Engineer",
-    "description": "Full-stack software engineer in Athens — React/TypeScript and PHP/Laravel, with side projects in Byzantine music, EEG and computer vision."
+    "title": "Fotis Oikonomou | Frontend Engineer",
+    "description": "Frontend engineer in Athens, working with React and TypeScript. I've built apps for public-sector platforms in Greece and Lithuania that thousands of people use every day."
   },
   "nav": {
     "about": "About",
@@ -13,15 +13,21 @@
     "label": "Main navigation"
   },
   "hero": {
-    "role": "Full-stack software engineer",
-    "lede": "Ten years of React/TypeScript and PHP/Laravel. Off the clock, signals: from Byzantine chant to EEG.",
+    "greeting": "Hello, I'm",
+    "cta": "Get in touch",
+    "role": "Frontend Engineer · React & TypeScript",
+    "lede": "I've spent the last few years building apps that real people rely on every day, from Coast Guard officers across Greece to taxpayers in Lithuania.",
     "location": "Athens, Greece",
     "traceLabel": "Decorative waveform that reacts to the pointer"
   },
   "about": {
     "title": "About",
-    "p1": "I am an Athens-based software engineer with approximately a decade of experience in React/TypeScript on the frontend and PHP (Laravel, Yii) on the backend. I have delivered mission-critical, large-scale public sector platforms: for nearly four years, I was the sole developer of a system utilized by officials at the Hellenic Ministry of Maritime Affairs, and more recently, I contributed to frontend development for Lithuania’s national tax portal.",
-    "p2": "In parallel, I draw on my diploma in Byzantine music to develop a classifier that identifies the mode (echos) of a hymn from a user-submitted audio clip. Over the past year, I have also been systematically delving into EEG signal processing and Brain-Computer Interfaces (BCIs), driven by a vision to build assistive technology for individuals with severe motor disabilities. I firmly believe we are living in an era full of possibilities for anyone committed to continuous growth."
+    "currentlyLabel": "Currently",
+    "currently": "Building a classifier that identifies the mode of Byzantine hymns, and digging into EEG signal processing and Brain-Computer Interfaces.",
+    "basedIn": "Based in",
+    "connect": "Let's connect",
+    "summary": "Professional summary",
+    "p1": "Frontend engineer with 7+ years building web applications, the last 3 focused on React and TypeScript in production, most recently on large public-sector platforms in Greece and Lithuania. I specialise in complex forms, shared component libraries and accessible (WCAG 2.1) interfaces built from Figma designs. With a full-stack background in PHP/Laravel, I can take features end-to-end and work closely with backend teams on API design. Open to remote roles and relocation."
   },
   "projects": {
     "title": "Projects",
@@ -33,8 +39,8 @@
     "code": "Code",
     "demo": "Demo"
   },
-  "experience": { "title": "Experience" },
-  "education": { "title": "Education" },
+  "experience": { "title": "Experience", "stack": "Tech stack" },
+  "education": { "title": "Education", "website": "Website" },
   "skills": { "title": "Skills" },
   "contact": {
     "title": "Contact",
@@ -47,8 +53,13 @@
     "success": "Message sent. I'll get back to you soon.",
     "errorValidation": "Enter your name, a valid email and a message of at least 10 characters.",
     "errorServer": "The message wasn't sent. Try again or email me directly.",
+    "errorName": "Enter your name.",
+    "errorEmail": "Enter a valid email, e.g. name@example.com.",
+    "errorMessage": "Your message needs at least 10 characters.",
+    "required": "All fields are required.",
     "honeypot": "Leave this field empty"
   },
+  "a11y": { "skip": "Skip to content", "newTab": "(opens in a new tab)" },
   "cv": { "download": "Download CV (PDF)" },
   "theme": { "toLight": "Light theme", "toDark": "Dark theme" },
   "locale": { "switch": "Ελληνικά", "switchLabel": "Αλλαγή σε Ελληνικά" },

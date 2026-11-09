@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Fotis Oikonomou — Full-stack Software Engineer";
+export const alt = "Fotis Oikonomou — Frontend Engineer, React & TypeScript";
 
 // Λατινικοί χαρακτήρες μόνο: η default γραμματοσειρά του next/og δεν έχει ελληνικά.
 export default function OgImage() {
@@ -15,7 +15,7 @@ export default function OgImage() {
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: 80, background: "#17151f", color: "#eceaf3" }}>
-        <div style={{ fontSize: 30, color: "#a6a2b8" }}>Full-stack software engineer / Athens</div>
+        <div style={{ fontSize: 30, color: "#a6a2b8" }}>Frontend Engineer · React & TypeScript / Athens</div>
         <div style={{ fontSize: 110, fontWeight: 300, lineHeight: 1, marginTop: 24 }}>Fotis</div>
         <div style={{ fontSize: 110, fontWeight: 700, lineHeight: 1 }}>Oikonomou</div>
         <svg width="1040" height="120" style={{ marginTop: 40 }}>

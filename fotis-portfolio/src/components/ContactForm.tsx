@@ -4,10 +4,14 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
 type Status = "idle" | "sending" | "success" | "validation" | "server";
+type Field = "name" | "email" | "message";
+
+const errorKey = { name: "errorName", email: "errorEmail", message: "errorMessage" } as const;
 
 export function ContactForm() {
   const t = useTranslations("contact");
   const [status, setStatus] = useState<Status>("idle");
+  const [errors, setErrors] = useState<Field[]>([]);
   const openedAt = useRef(Date.now());
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -15,9 +19,14 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
 
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email ?? "");
-    if (!data.name?.trim() || !emailOk || (data.message ?? "").trim().length < 10) {
+    const invalid: Field[] = [];
+    if (!data.name?.trim()) invalid.push("name");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email ?? "")) invalid.push("email");
+    if ((data.message ?? "").trim().length < 10) invalid.push("message");
+    setErrors(invalid);
+    if (invalid.length > 0) {
       setStatus("validation");
+      form.querySelector<HTMLElement>(`[name="${invalid[0]}"]`)?.focus();
       return;
     }
 
@@ -31,31 +40,58 @@ export function ContactForm() {
       if (res.status === 400) return setStatus("validation");
       if (!res.ok) return setStatus("server");
       form.reset();
+      setErrors([]);
       setStatus("success");
     } catch {
       setStatus("server");
     }
   }
 
+  // Border uses `muted` so the field outline reaches 3:1 against the page (WCAG 1.4.11).
   const field =
-    "w-full rounded-md border border-line bg-transparent px-3 py-2.5 text-base text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none";
+    "w-full rounded-md border border-muted bg-transparent px-3 py-2.5 text-base text-ink aria-[invalid=true]:border-gold aria-[invalid=true]:border-2";
+
+  const labelClass = "text-sm text-muted";
+
+  const fieldProps = (name: Field) => {
+    const hasError = errors.includes(name);
+    return {
+      id: `contact-${name}`,
+      name,
+      required: true,
+      "aria-invalid": hasError,
+      "aria-describedby": hasError ? `${name}-error` : undefined,
+      className: field,
+    };
+  };
+
+  const fieldError = (name: Field) =>
+    errors.includes(name) && (
+      <span id={`${name}-error`} className="text-sm font-medium text-gold">
+        {t(errorKey[name])}
+      </span>
+    );
 
   return (
     <form onSubmit={onSubmit} noValidate className="grid max-w-xl gap-5">
+      <p className="text-sm text-muted">{t("required")}</p>
       <div className="grid gap-5 sm:grid-cols-2">
-        <label className="grid gap-1.5 text-sm text-muted">
-          {t("name")}
-          <input name="name" autoComplete="name" required className={field} />
-        </label>
-        <label className="grid gap-1.5 text-sm text-muted">
-          {t("email")}
-          <input name="email" type="email" autoComplete="email" required className={field} />
-        </label>
+        <div className="grid content-start gap-1.5">
+          <label htmlFor="contact-name" className={labelClass}>{t("name")}</label>
+          <input {...fieldProps("name")} autoComplete="name" />
+          {fieldError("name")}
+        </div>
+        <div className="grid content-start gap-1.5">
+          <label htmlFor="contact-email" className={labelClass}>{t("email")}</label>
+          <input {...fieldProps("email")} type="email" autoComplete="email" />
+          {fieldError("email")}
+        </div>
       </div>
-      <label className="grid gap-1.5 text-sm text-muted">
-        {t("message")}
-        <textarea name="message" rows={5} required minLength={10} className={`${field} resize-y`} />
-      </label>
+      <div className="grid gap-1.5">
+        <label htmlFor="contact-message" className={labelClass}>{t("message")}</label>
+        <textarea {...fieldProps("message")} rows={5} minLength={10} className={`${field} resize-y`} />
+        {fieldError("message")}
+      </div>
 
       {/* Honeypot: οι άνθρωποι δεν το βλέπουν, τα bots το συμπληρώνουν */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
