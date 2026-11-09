@@ -23,8 +23,8 @@ export async function About({ locale }: { locale: Locale }) {
 
         {/* The stats card takes any extra height, so the two small cards stay compact. */}
         <div className="flex flex-col gap-5">
-          <div className="grid gap-5 sm:grid-cols-[auto_1fr]">
-            <div className={`${smallCard} flex items-center gap-4`}>
+          <div className="grid gap-5 sm:grid-cols-[1fr_auto]">
+            <div className={`${smallCard} flex items-center justify-center gap-4`}>
               <svg viewBox="0 0 24 24" className="size-9 shrink-0 text-fresh" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" />
                 <circle cx="12" cy="10" r="2.5" />
@@ -36,7 +36,7 @@ export async function About({ locale }: { locale: Locale }) {
               </div>
             </div>
 
-            <div className={`${smallCard} flex items-center justify-between gap-4`}>
+            <div className={`${smallCard} flex items-center justify-center gap-4`}>
               <p className="whitespace-nowrap font-semibold">{t("about.connect")}</p>
               <div className="flex gap-3">
                 <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn ${t("a11y.newTab")}`} className={iconButton}>
