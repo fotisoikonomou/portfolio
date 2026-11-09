@@ -49,9 +49,9 @@ export function ContactForm() {
 
   // Border uses `muted` so the field outline reaches 3:1 against the page (WCAG 1.4.11).
   const field =
-    "w-full rounded-md border border-muted bg-transparent px-3 py-2.5 text-base text-ink aria-[invalid=true]:border-gold aria-[invalid=true]:border-2";
+    "w-full rounded-xl border border-muted bg-paper px-4 py-3 text-base text-ink transition-colors hover:border-ink/60 aria-[invalid=true]:border-gold aria-[invalid=true]:border-2";
 
-  const labelClass = "text-sm text-muted";
+  const labelClass = "text-sm font-medium text-muted";
 
   const fieldProps = (name: Field) => {
     const hasError = errors.includes(name);
@@ -73,7 +73,7 @@ export function ContactForm() {
     );
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid max-w-xl gap-5">
+    <form onSubmit={onSubmit} noValidate className="grid gap-5">
       <p className="text-sm text-muted">{t("required")}</p>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="grid content-start gap-1.5">
@@ -105,12 +105,12 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
+          className="rounded-full bg-fresh px-7 py-3 font-semibold text-paper shadow-lg shadow-fresh/25 transition-transform hover:-translate-y-0.5 disabled:translate-y-0 disabled:opacity-60"
         >
           {status === "sending" ? t("sending") : t("send")}
         </button>
         <p role="status" aria-live="polite" className="text-sm">
-          {status === "success" && <span className="text-accent">{t("success")}</span>}
+          {status === "success" && <span className="font-medium text-fresh">{t("success")}</span>}
           {status === "validation" && <span className="text-gold">{t("errorValidation")}</span>}
           {status === "server" && <span className="text-gold">{t("errorServer")}</span>}
         </p>
