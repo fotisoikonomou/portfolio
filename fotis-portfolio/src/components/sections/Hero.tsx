@@ -16,6 +16,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         </h1>
         <p className="mt-4 text-2xl text-muted md:text-3xl">{t("hero.role")}</p>
         <p className="mt-6 max-w-[48ch] text-lg leading-relaxed text-ink/85">{t("hero.lede")}</p>
+        <p className="mt-4 max-w-[48ch] text-lg leading-relaxed text-ink/85">{t("hero.lede2")}</p>
         <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="#contact"

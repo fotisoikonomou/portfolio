@@ -43,15 +43,17 @@ export const profile = {
   cv: "/cv/Fotis_Oikonomou_Resume.pdf",
   timezone: "EET / EEST",
   stats: [
-    { value: { el: "7+", en: "7+" }, label: { el: "Χρόνια στην ανάπτυξη web", en: "Years in web development" } },
-    { value: { el: "50.000", en: "50,000" }, label: { el: "Χρήστες (Safe Water Sports)", en: "Users (Safe Water Sports)" } },
     {
-      value: { el: "~20", en: "~20" },
-      label: { el: "Modules με τα κοινόχρηστα components μου", en: "Modules using my shared components" },
+      value: { el: "10", en: "10" },
+      label: { el: "Χρόνια σε παραγωγή, backend και frontend", en: "Years in production, backend and frontend" },
     },
     {
-      value: { el: "Όλες", en: "All" },
-      label: { el: "Οι Λιμενικές Αρχές της Ελλάδας (σύστημα Λιμενικού)", en: "Port Authorities in Greece (Coast Guard system)" },
+      value: { el: "50.000", en: "50,000" },
+      label: { el: "Χρήστες στο Safe Water Sports (iOS/Android)", en: "Safe Water Sports users (iOS/Android)" },
+    },
+    {
+      value: { el: "4", en: "4" },
+      label: { el: "Χρόνια με την ευθύνη δύο πανελλαδικών συστημάτων", en: "Years owning two nationwide systems" },
     },
   ] as { value: L; label: L }[],
 };

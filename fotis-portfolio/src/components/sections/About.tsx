@@ -18,11 +18,15 @@ export async function About({ locale }: { locale: Locale }) {
           <h3 className="mb-4 text-lg font-semibold">{t("about.summary")}</h3>
           <div className="grid gap-4 leading-[1.7] text-ink/85">
             <p>{t("about.p1")}</p>
+            <p>{t("about.p2")}</p>
+            <p>{t("about.p3")}</p>
+            <p>{t("about.p4")}</p>
+            <p>{t("about.p5")}</p>
           </div>
         </div>
 
-        {/* The stats card takes any extra height, so the two small cards stay compact. */}
-        <div className="flex flex-col gap-5">
+        {/* The right column keeps its own height instead of stretching to match the summary text. */}
+        <div className="flex flex-col gap-5 self-start">
           <div className="grid gap-5 sm:grid-cols-[1fr_auto]">
             <div className={`${smallCard} flex items-center justify-center gap-4`}>
               <svg viewBox="0 0 24 24" className="size-9 shrink-0 text-fresh" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -53,9 +57,9 @@ export async function About({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="grid flex-1 grid-cols-2 content-center gap-x-3 gap-y-8 rounded-3xl border border-line bg-card px-4 py-8 shadow-sm sm:gap-x-4 sm:p-8">
+          <div className="grid grid-cols-2 content-center gap-x-3 gap-y-8 rounded-3xl border border-line bg-card px-4 py-8 shadow-sm sm:gap-x-4 sm:p-8">
             {profile.stats.map((s) => (
-              <div key={s.label.en} className="min-w-0 text-center sm:px-4">
+              <div key={s.label.en} className="min-w-0 text-center odd:last:col-span-2 sm:px-4">
                 <p className="text-3xl font-bold tracking-tight text-fresh min-[400px]:text-4xl sm:text-5xl md:text-6xl">{pick(s.value, locale)}</p>
                 <p className="mt-2 text-xs font-medium uppercase tracking-wide text-muted sm:text-sm sm:tracking-wider">{pick(s.label, locale)}</p>
               </div>
@@ -65,8 +69,7 @@ export async function About({ locale }: { locale: Locale }) {
 
         <div className={`${card} lg:col-span-2`}>
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-fresh">{t("about.currentlyLabel")}</p>
-          <p className="max-w-4xl text-xl font-medium leading-snug md:text-[1.4rem]">{t("about.currently")}</p>
-        </div>
+          <p className="max-w-4xl text-xl font-medium leading-snug md:text-[1.4rem]">{t("about.currently")}</p>        </div>
       </div>
     </Section>
   );

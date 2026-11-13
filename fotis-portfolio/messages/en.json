@@ -16,18 +16,22 @@
     "greeting": "Hello, I'm",
     "cta": "Get in touch",
     "role": "Full-stack Engineer · React/TypeScript & PHP/Laravel",
-    "lede": "I've spent the last few years building apps that real people rely on every day, from Coast Guard officers across Greece to taxpayers in Lithuania.",
+    "lede": "I've been building web applications for about ten years: the first six mostly on the backend (Laravel, Yii, Joomla), the last four mostly on the frontend with React and TypeScript. In practice, that means I can take a feature from the database schema all the way to the button the user clicks, with no handoff.",
+    "lede2": "I've done both: been the only developer on a project and been one of twenty people on a team. What stays constant is that I think about the risks, technical and timeline, from the start and put them on the table early, so delivery holds no surprises.",
     "location": "Athens, Greece",
     "traceLabel": "Decorative waveform that reacts to the pointer"
   },
   "about": {
     "title": "About",
     "currentlyLabel": "Currently",
-    "currently": "Combining my diploma in Byzantine music with code: I'm building a classifier that recognises, from audio, which musical mode (echos) a hymn is in (Python, librosa, React). Alongside that, I'm exploring EEG signal processing and Brain-Computer Interfaces.",
-    "basedIn": "Based in",
+    "currently": "I hold a diploma in Byzantine music, and I'm building a classifier that listens to a hymn and works out which of the eight modes (echoi) it belongs to — Python and librosa for the analysis, React for the UI. It's the first project where my two fields of study genuinely need each other.",    "basedIn": "Based in",
     "connect": "Let's connect",
     "summary": "Professional summary",
-    "p1": "I'm a full-stack engineer with 7+ years building web and mobile applications, from database to UI. For nearly 4 years I was responsible for two nationwide production systems in Greece: the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country, and Safe Water Sports, a water-safety app for iOS and Android with 50,000 users. I fixed database issues, improved their reliability and built new features. Most recently I built frontend modules for SOLON, Lithuania's national tax portal. I work well both when I own a system end-to-end and inside a larger team. Open to roles in Greece, remote, or relocation."
+    "p1": "I'm a full-stack engineer with about ten years in web and mobile applications — the first six mostly backend (Laravel, Yii, Joomla), the last four mostly React and TypeScript.",
+    "p2": "For nearly four years I was responsible for two production systems running across all of Greece: the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country, and Safe Water Sports, a water-safety app for iOS and Android with 50,000 users. I took them over with serious database problems; I stabilised them and from then on kept evolving them with new features, without them ever going down for their users.",
+    "p3": "Most recently I worked in a large team, building frontend modules for SOLON, Lithuania's national tax portal.",
+    "p4": "So I've done both: been the person who keeps a system running single-handedly, and one of many people on a large project. Either way, I think early about what could go wrong and raise it before it becomes a problem.",
+    "p5": "Open to roles in Greece, remote, or relocation."
   },
   "projects": {
     "title": "Projects",
