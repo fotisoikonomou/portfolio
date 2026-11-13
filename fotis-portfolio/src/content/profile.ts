@@ -97,8 +97,8 @@ export const projects: {
     kind: { el: "Επαγγελματικό · Quality & Reliability", en: "Professional · Quality & Reliability" },
     status: "live",
     summary: {
-      el: "Εφαρμογή της μη κερδοσκοπικής οργάνωσης Safe Water Sports, που συνεργάζεται με το Υπουργείο Ναυτιλίας, για ασφαλή θαλάσσια αναψυχή. Δείχνει σε πολίτες και επιθεωρητές τα αδειοδοτημένα κέντρα θαλάσσιων σπορ και τις παραλίες με ναυαγοσώστη σε όλη την Ελλάδα. Ανέπτυξα νέες λειτουργίες για iOS και Android και συντήρησα την εφαρμογή σε παραγωγή για σχεδόν 4 χρόνια.",
-      en: "An app by Safe Water Sports, a non-profit that works with the Ministry of Maritime Affairs, for safer days at sea. It shows citizens and inspectors the licensed water-sports centres and lifeguarded beaches across Greece. I built new features for iOS and Android and maintained the app in production for nearly 4 years.",
+      el: "Εφαρμογή της μη κερδοσκοπικής οργάνωσης Safe Water Sports, που συνεργάζεται με το Υπουργείο Ναυτιλίας για την ασφαλή θαλάσσια αναψυχή. Δείχνει σε πολίτες και επιθεωρητές τα αδειοδοτημένα κέντρα θαλάσσιων σπορ και τις παραλίες με ναυαγοσώστη σε όλη την Ελλάδα. Συντήρησα την εφαρμογή σε παραγωγή για σχεδόν τέσσερα χρόνια και ανέπτυξα νέες λειτουργίες για iOS και Android.",
+      en: "An app by Safe Water Sports, a non-profit that works with the Ministry of Maritime Affairs on safe recreation at sea. It shows citizens and inspectors the licensed water-sports centres and lifeguarded beaches across Greece. I maintained the app in production for nearly four years and built new features for iOS and Android.",
     },
     facts: [
       { value: { el: "50.000", en: "50,000" }, label: { el: "χρήστες", en: "users" } },
