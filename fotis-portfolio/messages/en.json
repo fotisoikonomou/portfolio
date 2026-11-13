@@ -13,7 +13,7 @@
     "label": "Main navigation"
   },
   "hero": {
-    "greeting": "Hello, I'm",
+    "greeting": "I'm",
     "cta": "Get in touch",
     "role": "Full-stack Engineer · React/TypeScript & PHP/Laravel",
     "lede": "I've been building web applications for about ten years: the first six mostly on the backend (Laravel, Yii, Joomla), the last four mostly on the frontend with React and TypeScript. In practice, that means I can take a feature from the database schema all the way to the button the user clicks, with no handoff.",
