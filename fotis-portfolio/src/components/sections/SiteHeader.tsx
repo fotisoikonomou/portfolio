@@ -23,14 +23,15 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
         <a href="#top" className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-tight">
           <Image
             src="/avatar.png"
-            alt=""
+            alt={`${pick(profile.firstName, locale)} ${pick(profile.lastName, locale)}`}
             width={40}
             height={40}
             className="size-10 rounded-full border border-line object-cover"
             priority
           />
-          {/* On very narrow phones only the avatar shows; the name stays available to screen readers. */}
-          <span className="truncate max-[399px]:sr-only">
+          {/* The avatar's alt names the link, so the visible name is hidden from screen readers to avoid reading it twice.
+              On very narrow phones only the avatar shows. */}
+          <span aria-hidden="true" className="truncate max-[399px]:hidden">
             {pick(profile.firstName, locale)} {pick(profile.lastName, locale)}
           </span>
         </a>

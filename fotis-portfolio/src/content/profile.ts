@@ -242,7 +242,7 @@ export const education: { title: L; school: L; year?: string; link?: L; logo: st
     logo: "uoi",
     monogram: { el: "ΠΙ", en: "UoI" },
     title: { el: "BSc Πληροφορική", en: "BSc Computer Science" },
-    school: { el: "Πανεπιστήμιο Ιωαννίνων - Tμήμα Πληροφορικής και Τηλεπικοινωνιών, Άρτα", en: "University of Ioannina -  Department of Informatics and Telecommunications, Arta" }, 
+    school: { el: "Πανεπιστήμιο Ιωαννίνων - Τμήμα Πληροφορικής και Τηλεπικοινωνιών, Άρτα", en: "University of Ioannina - Department of Informatics and Telecommunications, Arta" }, 
     year : "2011",
     link: {el:"https://www.dit.uoi.gr/?language=gr", en :"https://www.dit.uoi.gr/?language=en"}
   },
