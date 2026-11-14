@@ -29,11 +29,11 @@
     "currently": "I hold a diploma in Byzantine music, and I'm building a classifier that listens to a hymn and works out which of the eight modes (echoi) it belongs, to Python and librosa for the analysis, React for the UI. It's the first project where my two fields of study genuinely need each other.",    "basedIn": "Based in",
     "connect": "Let's connect",
     "summary": "Professional summary",
-    "p1": "I'm a full-stack engineer: 10 years in web development, ~3 of them building production React, TypeScript and React Native applications. Full-stack background in PHP (Laravel, Yii, Joomla).",
-    "p2": "For nearly four years I was responsible for two production systems running across all of Greece: the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country, and Safe Water Sports, a water-safety app for iOS and Android with 50,000 users. I took them over with serious database problems and I stabilised them and from then on kept evolving them with new features, without them ever going down for their users.",
+    "p1": "I'm a full-stack engineer with 10 years in web development: about 3 of them building production applications with React, TypeScript and React Native, and the rest in backend/full-stack development with PHP (Laravel, Yii, Joomla).",
+    "p2": "For nearly four years I was responsible for two production systems used across Greece: the Hellenic Coast Guard's incident-tracking system, used by every Port Authority in the country, and Safe Water Sports, a water-safety app for iOS and Android with 50,000 users. I took over the Coast Guard system with serious database problems. I stabilised it and then kept evolving it with new features, without disrupting its users.",
     "p3": "Most recently I worked in a large team, building frontend modules for SOLON, Lithuania's national tax portal.",
-    "p4": "So I've done both: been the person who keeps a system running single-handedly, and one of many people on a large project. Either way, I think early about what could go wrong and raise it before it becomes a problem.",
-    "p5": "Open to roles in Greece, remote, or relocation."
+    "p4": "So I've done both: been the person who keeps a system running single-handedly, and a member of a large team on a national-scale project. Either way, I think early about what could go wrong and flag it before it becomes a problem.",
+    "p5": "Available immediately for roles in Greece, remote, or with relocation."
   },
   "projects": {
     "title": "Projects",
