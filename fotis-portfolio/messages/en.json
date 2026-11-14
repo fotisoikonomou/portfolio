@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fotis Oikonomou | Full-stack Engineer (React/TypeScript · PHP/Laravel)",
-    "description": "Full-stack engineer in Athens with 7+ years building web and mobile applications. Responsible for two nationwide production systems in Greece; most recently built frontend modules for Lithuania's national tax portal."
+    "description": "Full-stack engineer in Athens with 10 years building web and mobile applications. Responsible for two nationwide production systems in Greece; most recently built frontend modules for Lithuania's national tax portal."
   },
   "nav": {
     "about": "About",
@@ -10,7 +10,9 @@
     "education": "Education",
     "skills": "Skills",
     "contact": "Contact",
-    "label": "Main navigation"
+    "label": "Main navigation",
+    "open": "Open menu",
+    "close": "Close menu"
   },
   "hero": {
     "greeting": "I'm",
@@ -49,7 +51,7 @@
   "skills": { "title": "Skills" },
   "contact": {
     "title": "Contact",
-    "intro": "Open to roles in Greece, remote, or relocation. Write to me here or send an email.",
+    "intro": "Write to me here or send an email.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
@@ -67,6 +69,5 @@
   "a11y": { "skip": "Skip to content", "newTab": "(opens in a new tab)" },
   "cv": { "download": "Download CV (PDF)" },
   "theme": { "toLight": "Light theme", "toDark": "Dark theme" },
-  "locale": { "switch": "Ελληνικά", "switchLabel": "Αλλαγή σε Ελληνικά" },
-  "footer": { "motto": "Fall forward." }
+  "locale": { "switch": "Ελληνικά", "switchLabel": "Αλλαγή σε Ελληνικά" }
 }

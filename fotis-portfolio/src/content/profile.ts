@@ -3,20 +3,17 @@ import type { Locale } from "@/i18n/routing";
 import type { SimpleIcon } from "simple-icons";
 import {
   siApple,
-  siDocker,
   siExpo,
   siFigma,
   siGit,
   siGoogleplay,
   siJavascript,
-  siJenkins,
   siJira,
   siJoomla,
   siJquery,
   siLaravel,
   siMysql,
   siNextdotjs,
-  siNginx,
   siPhp,
   siPython,
   siReact,
@@ -286,14 +283,11 @@ export const skills: { group: L; items: Skill[] }[] = [
   },
   {
     group: { el: "Σήματα & ML", en: "Signals & ML" },
-    items: [{ name: "Python", icon: siPython }, { name: "librosa" }, { name: "MNE-Python" }, { name: "BrainFlow" }],
+    items: [{ name: "Python", icon: siPython }, { name: "librosa" }],
   },
   {
     group: { el: "Εργαλεία & πρακτικές", en: "Tooling & practices" },
     items: [
-      { name: "Docker", icon: siDocker },
-      { name: "nginx", icon: siNginx },
-      { name: "Jenkins", icon: siJenkins },
       { name: "Git", icon: siGit },
       { name: "Jira", icon: siJira },
       { name: "Figma", icon: siFigma },

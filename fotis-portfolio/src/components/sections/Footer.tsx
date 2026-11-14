@@ -19,7 +19,6 @@ export async function Footer({ locale }: { locale: Locale }) {
           <NewTabHint label={t("a11y.newTab")} arrow={false} />
         </a>
       </p>
-      <p lang="en" className="italic">{t("footer.motto")}</p>
     </footer>
   );
 }

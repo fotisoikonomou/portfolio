@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/routing";
 import { pick, profile } from "@/content/profile";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { MobileNav } from "@/components/MobileNav";
 
 const sections = ["about", "projects", "experience", "education", "skills", "contact"] as const;
 
@@ -18,8 +19,8 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
       >
         {t("a11y.skip")}
       </a>
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3 md:px-10">
-        <a href="#top" className="flex shrink-0 items-center gap-3 text-lg font-semibold tracking-tight">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6 md:px-10">
+        <a href="#top" className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-tight">
           <Image
             src="/avatar.png"
             alt=""
@@ -28,7 +29,10 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
             className="size-10 rounded-full border border-line object-cover"
             priority
           />
-          {pick(profile.firstName, locale)} {pick(profile.lastName, locale)}
+          {/* On very narrow phones only the avatar shows; the name stays available to screen readers. */}
+          <span className="truncate max-[399px]:sr-only">
+            {pick(profile.firstName, locale)} {pick(profile.lastName, locale)}
+          </span>
         </a>
 
         <nav aria-label={t("nav.label")} className="hidden lg:block">
@@ -54,21 +58,10 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
           </a>
           <LocaleSwitcher />
           <ThemeToggle />
+          {/* Below lg the section links live in a dropdown menu */}
+          <MobileNav sections={sections} cv={profile.cv} />
         </div>
       </div>
-
-      {/* Σε μικρές οθόνες το μενού γίνεται δεύτερη γραμμή με οριζόντιο scroll */}
-      <nav aria-label={t("nav.label")} className="border-t border-line lg:hidden">
-        <ul className="mx-auto flex max-w-6xl gap-5 overflow-x-auto whitespace-nowrap px-6 py-2.5 text-sm md:px-10">
-          {sections.map((s) => (
-            <li key={s}>
-              <a href={`#${s}`} className="text-muted transition-colors hover:text-accent">
-                {t(`nav.${s}`)}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 }

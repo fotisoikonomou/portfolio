@@ -33,7 +33,7 @@ export async function Education({ locale }: { locale: Locale }) {
                   {logo ? (
                     <Image
                       src={logo}
-                      alt=""
+                      alt={pick(e.school, locale)}
                       width={0}
                       height={0}
                       sizes="240px"

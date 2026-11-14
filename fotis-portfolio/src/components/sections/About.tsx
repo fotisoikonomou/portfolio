@@ -40,8 +40,7 @@ export async function About({ locale }: { locale: Locale }) {
               </div>
             </div>
 
-            <div className={`${smallCard} flex items-center justify-center gap-4`}>
-              <p className="whitespace-nowrap font-semibold">{t("about.connect")}</p>
+            <div className={`${smallCard} flex items-center justify-center`}>
               <div className="flex gap-3">
                 <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn ${t("a11y.newTab")}`} className={iconButton}>
                   <svg viewBox="0 0 24 24" className="size-5" fill="currentColor" aria-hidden="true">

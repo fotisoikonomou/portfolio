@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Φώτης Οικονόμου | Full-stack Engineer (React/TypeScript · PHP/Laravel)",
-    "description": "Full-stack engineer στην Αθήνα με 7+ χρόνια εμπειρίας σε web και mobile εφαρμογές. Υπεύθυνος για δύο συστήματα πανελλαδικής εμβέλειας σε παραγωγή· πιο πρόσφατα ανέπτυξα frontend modules για την εθνική φορολογική πύλη της Λιθουανίας."
+    "description": "Full-stack engineer στην Αθήνα με 10 χρόνια εμπειρίας σε web και mobile εφαρμογές. Υπεύθυνος για δύο συστήματα πανελλαδικής εμβέλειας σε παραγωγή· πιο πρόσφατα ανέπτυξα frontend modules για την εθνική φορολογική πύλη της Λιθουανίας."
   },
   "nav": {
     "about": "Σχετικά",
@@ -10,7 +10,9 @@
     "education": "Σπουδές",
     "skills": "Δεξιότητες",
     "contact": "Επικοινωνία",
-    "label": "Κύρια πλοήγηση"
+    "label": "Κύρια πλοήγηση",
+    "open": "Άνοιγμα μενού",
+    "close": "Κλείσιμο μενού"
   },
   "hero": {
     "greeting": "Είμαι ο",
@@ -49,7 +51,7 @@
   "skills": { "title": "Δεξιότητες" },
   "contact": {
     "title": "Επικοινωνία",
-    "intro": "Διαθέσιμος για θέσεις στην Ελλάδα, remote ή με μετεγκατάσταση. Γράψτε μου εδώ ή στείλτε μου email.",
+    "intro": "Γράψτε μου εδώ ή στείλτε μου email.",
     "name": "Όνομα",
     "email": "Email",
     "message": "Μήνυμα",
@@ -67,6 +69,5 @@
   "a11y": { "skip": "Μετάβαση στο περιεχόμενο", "newTab": "(ανοίγει σε νέα καρτέλα)" },
   "cv": { "download": "Βιογραφικό (EN)" },
   "theme": { "toLight": "Φωτεινό θέμα", "toDark": "Σκοτεινό θέμα" },
-  "locale": { "switch": "English", "switchLabel": "Switch to English" },
-  "footer": { "motto": "Fall forward." }
+  "locale": { "switch": "English", "switchLabel": "Switch to English" }
 }
