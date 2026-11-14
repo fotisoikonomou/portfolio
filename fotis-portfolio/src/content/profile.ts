@@ -33,7 +33,7 @@ export const profile = {
   email: "fotiosoikonomou1@gmail.com", 
   links: {
     github: "https://github.com/fotisoikonomou", 
-    linkedin: "https://www.linkedin.com/in/fotios-oikonomou-full-stack-web-developer/", // TODO
+    linkedin: "https://www.linkedin.com/in/fotios-oikonomou-dev/",
   },
  
   // One English CV for both languages; the Greek button label says so.
@@ -126,6 +126,8 @@ export const experience: {
   highlights: L<string[]>;
   stack: string[];
   links?: StoreLink[];
+  /** Shows a "full details on LinkedIn" link instead of listing highlights. */
+  detailsOnLinkedIn?: boolean;
 }[] = [
   {
     role: { el: "Software Engineer", en: "Software Engineer" },
@@ -158,13 +160,13 @@ export const experience: {
     highlights: {
       el: [
         "Είχα την ευθύνη του Safe Water Sports σε παραγωγή για σχεδόν 4 χρόνια: εφαρμογή iOS/Android για την ασφάλεια στη θάλασσα (React Native, Expo), που λειτουργεί μέσω της ΜΚΟ Safe Water Sports και χρησιμοποιείται από 50.000 πολίτες και ελεγκτές πεδίου. Ανέπτυξα νέες λειτουργίες και τη συντήρησα σε παραγωγή.",
-        "Υπεύθυνος για το σύστημα καταγραφής συμβάντων του Λιμενικού Σώματος σε παραγωγή (PHP/Yii2, MySQL, REST APIs), που χρησιμοποιείται από όλες τις Λιμενικές Αρχές της Ελλάδας για την καταγραφή θαλάσσιων ατυχημάτων, πνιγμών και επιθεωρήσεων· συνέλεξα τις απαιτήσεις απευθείας με το Υπουργείο.",
+        "Μοναδικός developer με την ευθύνη του συστήματος καταγραφής συμβάντων του Λιμενικού Σώματος (PHP/Yii2, REST APIs) για σχεδόν 4 χρόνια, που χρησιμοποιείται από όλες τις Λιμενικές Αρχές της Ελλάδας: το συντηρούσα σε παραγωγή, έλυσα κρίσιμα προβλήματα στη βάση δεδομένων και ανέπτυξα νέες λειτουργίες.",
         "Ανέπτυξα frontends σε React/TypeScript για διοικητικά συστήματα του ελληνικού δημόσιου τομέα.",
         "Συντήρησα και αναβάθμισα Laravel (PHP 8) εφαρμογές σε παραγωγή για πλατφόρμες του δημόσιου τομέα, βελτιστοποιώντας MySQL queries και την απόδοση του backend.",
       ],
       en: [
         "Responsible for Safe Water Sports in production for nearly 4 years: a water-safety app for iOS and Android (React Native, Expo), run through the Safe Water Sports non-profit and used by 50,000 citizens and field inspectors. Built new features and maintained it in production.",
-        "Responsible for the Hellenic Coast Guard’s incident-tracking system in production (PHP/Yii2, MySQL, REST APIs), used by every Port Authority in Greece to record sea accidents, drownings and inspections; gathered requirements directly with the Ministry.",
+        "Sole developer responsible for the Hellenic Coast Guard’s incident-tracking system (PHP/Yii2, REST APIs) for nearly 4 years, used by every Port Authority in Greece: maintained it in production, resolved critical database issues and built new features.",
         "Built React/TypeScript frontends for Greek public-sector administrative systems.",
         "Maintained and upgraded production Laravel (PHP 8) applications for public-sector platforms, optimizing MySQL queries and backend performance.",
       ],
@@ -204,6 +206,14 @@ export const experience: {
       ],
     },
     stack: ["PHP", "Yii2", "JavaScript", "jQuery"],
+  },
+  {
+    role: { el: "Προηγούμενοι ρόλοι", en: "Earlier roles" },
+    org: { el: "Web development (PHP, JavaScript) | Τρίκαλα", en: "Web development (PHP, JavaScript) | Trikala, Greece" },
+    period: "2016 – 02/2019",
+    highlights: { el: [], en: [] },
+    stack: [],
+    detailsOnLinkedIn: true,
   },
 ];
 

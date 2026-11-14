@@ -46,7 +46,7 @@
     "code": "Code",
     "demo": "Demo"
   },
-  "experience": { "title": "Experience", "stack": "Tech stack" },
+  "experience": { "title": "Experience", "stack": "Tech stack", "details": "Full details on LinkedIn" },
   "education": { "title": "Education", "website": "Website" },
   "skills": { "title": "Skills" },
   "contact": {

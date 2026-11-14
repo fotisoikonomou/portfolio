@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import { experience, pick } from "@/content/profile";
+import { experience, pick, profile } from "@/content/profile";
 import { NewTabHint } from "@/components/NewTabHint";
 import { StoreButton } from "@/components/StoreButton";
 import { Section } from "./Section";
@@ -44,14 +44,30 @@ export async function Experience({ locale }: { locale: Locale }) {
                 <p className="rounded-full bg-line/70 px-3 py-1 text-sm tabular-nums text-muted">{job.period}</p>
               </header>
 
-              <ul className="mt-5 grid max-w-[75ch] gap-2.5 leading-[1.7] text-ink/85">
-                {pick(job.highlights, locale).map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span aria-hidden="true" className="mt-[0.7em] size-1.5 shrink-0 rounded-full bg-fresh" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {pick(job.highlights, locale).length > 0 && (
+                <ul className="mt-5 grid max-w-[75ch] gap-2.5 leading-[1.7] text-ink/85">
+                  {pick(job.highlights, locale).map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span aria-hidden="true" className="mt-[0.7em] size-1.5 shrink-0 rounded-full bg-fresh" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {job.detailsOnLinkedIn && (
+                <p className="mt-5 text-ink/85">
+                  <a
+                    href={profile.links.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-fresh underline underline-offset-4 hover:no-underline"
+                  >
+                    {t("experience.details")}
+                    <NewTabHint label={t("a11y.newTab")} />
+                  </a>
+                </p>
+              )}
 
               {job.links && (
                 <div className="mt-6 flex flex-wrap gap-3">

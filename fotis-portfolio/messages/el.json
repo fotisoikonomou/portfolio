@@ -46,7 +46,7 @@
     "code": "Κώδικας",
     "demo": "Demo"
   },
-  "experience": { "title": "Εμπειρία", "stack": "Τεχνολογίες" },
+  "experience": { "title": "Εμπειρία", "stack": "Τεχνολογίες", "details": "Αναλυτικά στο LinkedIn" },
   "education": { "title": "Σπουδές", "website": "Ιστοσελίδα" },
   "skills": { "title": "Δεξιότητες" },
   "contact": {
